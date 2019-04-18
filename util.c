@@ -18,13 +18,7 @@ void swap(int *array, int i1, int i2) {
     array[i2] = temp;
 }
 
-/**
- *
- * @param array
- * @param start 开始位置
- * @param end 结束位置（不包含）
- * @return 分区的位置，是高区域的开始
- */
+
 int partition(int *array, const int start, const int end) {
     if (end <= start + 1)
         return start;
@@ -59,4 +53,23 @@ int partition(int *array, const int start, const int end) {
     swap(array, start, high);
 
     return high;
+}
+
+/**
+ * 寻找最高bit的位置
+ * @param N
+ * @return 最高比特位置，第一个比特下标为0
+ */
+int highestBit(unsigned int N) {
+    int move = 16;
+    int result = 0;
+    while (move > 0) {
+        int n = N >> move;
+        if (n) {
+            result += move;
+            N = n;
+        }
+        move /= 2;
+    }
+    return result;
 }

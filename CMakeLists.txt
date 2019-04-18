@@ -8,3 +8,5 @@ add_subdirectory(leetcode)
 add_library(util util.c)
 
 add_library(queue queue.c)
+
+add_executable(exam0412 exam0412.cpp)
