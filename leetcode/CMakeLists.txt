@@ -1,7 +1,7 @@
 add_library(tree tree.c)
 target_link_libraries(tree queue)
 
-set(PROBLEMS )
+set(PROBLEMS 824 976 888 521)
 
 foreach (problem ${PROBLEMS})
     if (EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/${problem}.cpp)
