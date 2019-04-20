@@ -58,9 +58,11 @@ int partition(int *array, const int start, const int end) {
 /**
  * 寻找最高bit的位置
  * @param N
- * @return 最高比特位置，第一个比特下标为0
+ * @return 最高比特位置，第一个比特下标为0。若N为0，返回-1
  */
 int highestBit(unsigned int N) {
+    if (N == 0)
+        return -1;
     int move = 16;
     int result = 0;
     while (move > 0) {
