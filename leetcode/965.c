@@ -4,12 +4,12 @@
 
 #include "datastructures.h"
 
-bool traverse(struct TreeNode *root, int shouldBeVal) {
-    if (root->val != shouldBeVal)
+bool traverse_104(struct TreeNode *root, int depth) {
+    if (root->val != depth)
         return false;
 
-    return (root->left != NULL ? traverse(root->left, shouldBeVal) : true) &&
-           (root->right != NULL ? traverse(root->right, shouldBeVal) : true);
+    return (root->left != NULL ? traverse_104(root->left, depth) : true) &&
+           (root->right != NULL ? traverse_104(root->right, depth) : true);
 }
 
 bool isUnivalTree(struct TreeNode *root) {
@@ -17,5 +17,5 @@ bool isUnivalTree(struct TreeNode *root) {
         return false;
     }
 
-    return traverse(root, root->val);
+    return traverse_104(root, root->val);
 }

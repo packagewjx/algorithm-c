@@ -24,6 +24,13 @@ int partition(int *array, int start, int end);
  */
 int highestBit(unsigned int N);
 
+/**
+ * 计算n的二进制表示有多少个1
+ * @param n
+ * @return 1的个数
+ */
+inline int bitCount(int n);
+
 #define ALGORITHM_C_UTIL_H
 
 #endif //ALGORITHM_C_UTIL_H

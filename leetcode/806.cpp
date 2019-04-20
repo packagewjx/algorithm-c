@@ -8,7 +8,7 @@
 using std::string;
 using std::vector;
 
-#define MAX_WIDTH 100
+#define MAX_WIDTH_806 100
 
 class Solution {
 public:
@@ -16,7 +16,7 @@ public:
         int lineWidth = 0;
         int lineCount = 0;
         for (int i = 0; i < S.size(); i++) {
-            if (lineWidth + widths[S[i] - 'a'] > MAX_WIDTH) {
+            if (lineWidth + widths[S[i] - 'a'] > MAX_WIDTH_806) {
                 lineCount += 1;
                 lineWidth = 0;
             }
